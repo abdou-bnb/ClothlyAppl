@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginBottom="@dimen/margin_16"
+    android:paddingRight="@dimen/padding_10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="@dimen/height_120"
+        android:layout_height="@dimen/height_120"
+        android:padding="@dimen/margin_5"
+        android:scaleType="centerCrop"
+        android:src="@color/red_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image_view_price_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:src="@drawable/ic_price_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view"
+        app:layout_constraintEnd_toEndOf="@+id/image_view" />
+
+    <TextView
+        android:id="@+id/text_view_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_price_bg"
+        app:layout_constraintStart_toStartOf="@+id/image_view_price_bg"
+        tool:text="$0.0" />
+
+</android.support.constraint.ConstraintLayout>

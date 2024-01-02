@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/choose_color_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_40"
+        android:background="@drawable/bg_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adView" />
+
+    <TextView
+        android:id="@+id/text_view_color_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Choose Color"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_color_view"
+        app:layout_constraintStart_toStartOf="@+id/choose_color_view"
+        app:layout_constraintTop_toTopOf="@+id/choose_color_view" />
+
+    <TextView
+        android:id="@+id/text_view_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Select"
+        android:textColor="@color/blue_text_color"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_color_view"
+        app:layout_constraintRight_toLeftOf="@+id/image_view_arrow"
+        app:layout_constraintTop_toTopOf="@+id/choose_color_view" />
+
+    <ImageView
+        android:id="@+id/image_view_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_down"
+        android:layout_marginRight="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_color_view"
+        app:layout_constraintEnd_toEndOf="@+id/choose_color_view"
+        app:layout_constraintTop_toTopOf="@+id/choose_color_view" />
+
+
+</android.support.constraint.ConstraintLayout>
+</layout>

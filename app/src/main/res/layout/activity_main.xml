@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_navigation_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg_ash"
+    tools:context="com.clothly.ecommerce.data.ui.main.MainActivity"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_slider_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_300"
+                        android:focusableInTouchMode="true">
+
+                    </android.support.v4.view.ViewPager>
+
+                    <!--START OF DOTS CONATAINER-->
+                    <LinearLayout
+                        android:id="@+id/layout_slider_main_dots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_x"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/fab_margin_half">
+
+                    </LinearLayout>
+                    <!--END OF DOTS CONATAINER-->
+
+                </RelativeLayout>
+
+                <!--START OF CATEGORY RECYCLERVIEW-->
+
+                <TextView
+                    android:id="@+id/text_view_featured_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/title_text_style"
+                    android:text="@string/feature_product" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_feature_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/padding_10">
+
+                </android.support.v7.widget.RecyclerView>
+                <!--main section-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_category_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="true"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/colorAsh"
+                    android:indeterminateTintMode="src_atop"
+                    android:progressDrawable="@drawable/bg_progress_bar"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/menu_navigation_view" />
+
+</android.support.v4.widget.DrawerLayout>
+
+</layout>

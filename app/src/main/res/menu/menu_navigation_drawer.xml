@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_orders"
+        android:title="My Orders"
+        android:icon="@drawable/ic_my_order" />
+    <item
+        android:id="@+id/nav_favourites"
+        android:title="My Favourites"
+        android:icon="@drawable/ic_my_favourites" />
+
+    <item
+        android:id="@+id/nav_category"
+        android:title="Categories"
+        android:icon="@drawable/ic_category" />
+
+    <item
+        android:id="@+id/nav_about_us"
+        android:title="About Us"
+        android:icon="@drawable/ic_about" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout" />
+
+   <!-- <item
+        android:id="@+id/nav_coupon_codes"
+        android:title="My Coupon Codes"
+        android:icon="@drawable/ic_menu_offer" />-->
+
+</menu>

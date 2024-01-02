@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <stroke
+                android:width="@dimen/height_1"
+                android:color="@color/bg_comment_stock"/>
+            <solid
+                android:color="@color/bg_comment"/>
+            <corners
+                android:radius="@dimen/margin_8"/>
+        </shape>
+    </item>
+</selector>

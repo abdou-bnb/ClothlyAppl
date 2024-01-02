@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bg">
+
+    <ImageView
+        android:id="@+id/image_view_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_160"
+        android:src="@mipmap/ic_logo_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_header"
+        android:layout_width="@dimen/height_240"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_100"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="@string/congratulations"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_logo" />
+
+    <TextView
+        android:id="@+id/text_view_header_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/your_account_has_been_activated"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_header" />
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:id="@+id/layout_view_pager_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_margin="@dimen/margin_8"
+            android:background="@drawable/bg_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/pager_indicator"
+            android:layout_width="@dimen/height_30"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/height_15"
+            android:layout_marginRight="@dimen/height_15"
+            app:ci_drawable="@drawable/circle_bg"
+            app:ci_drawable_unselected="@drawable/circle_border_bg_1"
+            app:ci_orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+            app:layout_constraintEnd_toEndOf="@+id/view_pager"
+            app:layout_constraintTop_toTopOf="@+id/view_pager" />
+
+
+        <ImageView
+            android:id="@+id/image_view_fav_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_5"
+            android:src="@drawable/ic_fav_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_view_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:src="@drawable/ic_favorite_white"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_fav_bg"
+            app:layout_constraintStart_toStartOf="@+id/image_view_fav_bg"
+            app:layout_constraintTop_toTopOf="@+id/image_view_fav_bg" />
+
+        <TextView
+            android:id="@+id/text_view_fav_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_fav_bg"
+            app:layout_constraintStart_toEndOf="@+id/image_view_favourite"
+            app:layout_constraintTop_toTopOf="@+id/image_view_fav_bg"
+            tool:text="320" />
+
+        <ImageView
+            android:id="@+id/image_view_price_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_25"
+            android:src="@drawable/ic_price_bg_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_price_bg"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_price_bg"
+            app:layout_constraintStart_toStartOf="@+id/image_view_price_bg"
+            app:layout_constraintTop_toTopOf="@+id/image_view_price_bg"
+            tool:text="$32.05" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

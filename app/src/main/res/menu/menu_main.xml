@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.clothly.ecommerce.data.ui.main.MainActivity">
+
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search"/>
+
+    <item
+        android:id="@+id/action_cart_count"
+        app:actionLayout="@layout/item_toolbar_cart_count_menu"
+        android:title="Cart"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_cart"/>
+    
+</menu>

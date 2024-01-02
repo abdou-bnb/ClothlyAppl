@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clothly.ecommerce.data">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.clothly.ecommerce.data.data.util.UniqaApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_squre"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/ic_launcher_squre" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.main.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.userRegistration.RegisterActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.addcart.CartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.userProfile.ProfileActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.userLogin.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.prductGrid.ProductGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.splashScreen.SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.clothly.ecommerce.data.ui.pushnotification.PushNotification">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.clothly.ecommerce.data.ui.category.CategoryActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.clothly.ecommerce.data.ui.myfavourite.UserFavActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.search.SearchActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.emailverification.EmailVerificationActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.welcome.WelcomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.signinresendcode.SignInEmailSendActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.signinemailverification.SignInEmailVerificationActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.forgotpasswordsendemail.SendEmailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.updatepassword.UpdatePasswordActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.shippingaddress.ShippingAddressActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="com.clothly.ecommerce.data.ui.checkout.CheckOutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.productdetails.ProductDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.reviewdetails.ReviewDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.userfeedback.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.ordercomplete.OrderCompleteActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.clothly.ecommerce.data.ui.aboutus.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.clothly.ecommerce.data.ui.offerproduct.OfferProductActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.clothly.ecommerce.data.ui.onboarding.OnBoardingActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

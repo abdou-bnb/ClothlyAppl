@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+
+        <shape android:shape="rectangle">
+            <solid android:color="#eeffffff" />
+            <corners android:bottomLeftRadius="@dimen/rounded_small" android:bottomRightRadius="@dimen/rounded_small" android:topLeftRadius="@dimen/rounded_small" android:topRightRadius="@dimen/rounded_small" />
+
+            <solid android:color="@color/colorGoogleHover" />
+        </shape>
+
+    </item>
+
+    <item android:state_focused="true">
+
+        <shape android:shape="rectangle">
+            <solid android:color="#eeffffff" />
+            <corners android:bottomLeftRadius="@dimen/rounded_small" android:bottomRightRadius="@dimen/rounded_small" android:topLeftRadius="@dimen/rounded_small" android:topRightRadius="@dimen/rounded_small" />
+
+            <solid android:color="@color/colorGoogleHover" />
+        </shape>
+
+    </item>
+
+    <item android:state_enabled="true">
+
+        <shape android:shape="rectangle">
+            <solid android:color="#eeffffff" />
+            <corners android:bottomLeftRadius="@dimen/rounded_small" android:bottomRightRadius="@dimen/rounded_small" android:topLeftRadius="@dimen/rounded_small" android:topRightRadius="@dimen/rounded_small" />
+
+            <solid android:color="@color/colorGoogle" />
+        </shape>
+
+    </item>
+</selector>

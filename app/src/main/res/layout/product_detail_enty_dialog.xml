@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/EcommerceTheme">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorEEE"
+        android:padding="@dimen/fab_margin"
+        android:text="Choose Product"
+        android:textSize="@dimen/heading_small" />
+
+    <LinearLayout
+        android:id="@+id/dialog_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_title"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fab_margin"
+        android:paddingLeft="@dimen/margin_x"
+        android:paddingRight="@dimen/margin_x"
+        android:paddingTop="@dimen/fab_margin_half">
+
+
+        <!--START OF PLAUS/MINUS BUTTON-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/fab_margin_half">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textColor="@color/fontLiteColor" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/fab_margin">
+
+                <LinearLayout
+                    android:id="@+id/btn_dialog_cart_product_minus_container"
+                    style="@style/BtnCartProductDetailDialogContainer"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageButton
+                        style="@style/BtnCartProductDetailDialog"
+                        android:src="@drawable/ic_caret_left" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/btn_dialog_cart_product_quantity_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:paddingRight="@dimen/fab_margin_half"
+                    android:paddingLeft="@dimen/fab_margin_half">
+
+                    <Button
+                        android:id="@+id/btn_dialog_cart_product_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/heading_mideum" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_dialog_cart_product_plus_conatiner"
+                    style="@style/BtnCartProductDetailDialogContainer"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageButton
+                        style="@style/BtnCartProductDetailDialog"
+                        android:src="@drawable/ic_caret_right" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--END OF PLAUS/MINUS BUTTON-->
+
+        <LinearLayout
+            android:id="@+id/layout_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--START OF SIZE-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:text="Choose a size"
+                android:textColor="@color/fontLiteColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_size_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <!--END OF SIZE-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--START OF COLOR-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Choose a color"
+                android:textColor="@color/fontLiteColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_color_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+            <!--END OF COLOR-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_body"
+        android:background="@color/colorEEE"
+        android:orientation="horizontal"
+        android:padding="@dimen/fab_margin">
+
+        <Button
+            android:id="@+id/btn_product_detail_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Cancel"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_product_detail_dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Ok"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

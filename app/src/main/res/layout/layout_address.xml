@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner_radius">
+
+        <TextView
+            android:id="@+id/text_view_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginTop="@dimen/height_8"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Shipping Address"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_address_title" />
+
+
+        <RadioButton
+            android:id="@+id/radio_current_address_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_14"
+            android:layout_marginTop="@dimen/height_8"
+            android:buttonTint="@color/dark_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_address" />
+
+        <TextView
+            android:id="@+id/text_view_address_2"
+            android:layout_width="@dimen/height_230"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_8"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Add Address"
+            android:paddingBottom="@dimen/margin_10"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginBottom="@dimen/margin_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/radio_current_address_2"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_address" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

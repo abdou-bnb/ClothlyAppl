@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view_profile"
+        android:layout_width="@dimen/height_48"
+        android:layout_height="@dimen/height_48"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_15"
+        android:src="@color/red_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_18"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Thomas Shelby"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintStart_toEndOf="@+id/image_view_profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/rating_bar_avg_rating"
+        style="@style/SmallRating"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_8"
+        android:isIndicator="true"
+        android:rating="4.0"
+        android:stepSize="1.0"
+        android:theme="@style/SmallRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_5"
+        android:fontFamily="@font/roboto_regular"
+        android:text="07 March,2019"
+        android:textColor="@color/colorAsh"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintStart_toEndOf="@+id/image_view_profile"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_name" />
+
+    <TextView
+        android:id="@+id/text_view_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginRight="@dimen/margin_8"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingBottom="@dimen/padding_8"
+        android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_profile"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_date" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_up_images"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:paddingBottom="@dimen/padding_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_profile"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_message" />
+    <View
+        android:id="@+id/view_line_2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_1"
+        android:layout_marginRight="@dimen/margin_8"
+        android:background="@color/review_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view_up_images"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_up_images" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>

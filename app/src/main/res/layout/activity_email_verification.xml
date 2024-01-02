@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_30">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorTransparent"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:src="@mipmap/ic_logo_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <TextView
+                android:id="@+id/text_view_header"
+                android:layout_width="@dimen/height_240"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_50"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/enter_the_code_we_sent_to"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_logo" />
+
+            <TextView
+                android:id="@+id/text_view_email"
+                android:layout_width="@dimen/height_240"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center"
+                android:text="@string/name_yourdomain_cim"
+                android:textColor="@color/bg_comment_stock"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_header" />
+
+            <TextView
+                android:id="@+id/text_view_4_digit"
+                android:layout_width="@dimen/height_240"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/digit_4_pic_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_email" />
+
+
+            <View
+                android:id="@+id/view_email_bg"
+                style="@style/edit_text_border"
+                android:layout_marginTop="@dimen/margin_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_4_digit" />
+
+            <View
+                android:id="@+id/view_email_icon"
+                android:layout_width="@dimen/width_40"
+                android:layout_height="@dimen/height_40"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:background="@mipmap/ic_code_digit"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintStart_toStartOf="@+id/view_email_bg"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="@dimen/height_1"
+                android:layout_height="@dimen/height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@color/colorWhite"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_email_icon"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg" />
+
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="185dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:digits="1234567890"
+                android:fontFamily="@font/roboto_bold"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/colorWhite"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintEnd_toEndOf="@+id/view_email_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_line"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg"
+                app:pinAnimationType="none"
+                app:pinBackgroundDrawable="@drawable/bg_pin_round"
+                app:pinBackgroundIsSquare="true"
+                app:pinCharacterSpacing="@dimen/margin_35"
+                app:pinLineColors="@drawable/pin_line_colors"
+                app:pinTextBottomPadding="4dp" />
+
+            <TextView
+                android:id="@+id/text_view_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center"
+                android:enabled="false"
+                android:text="@string/resend_code"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_email_bg" />
+
+            <TextView
+                android:id="@+id/text_view_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintTop_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintLeft_toRightOf="@+id/text_view_resend"/>
+
+
+            <Button
+                android:id="@+id/button_sign_in"
+                style="@style/button_sign_in"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/continues"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_resend" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
+

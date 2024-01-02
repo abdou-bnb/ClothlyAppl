@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/slider_popular_product_item_container"
+    android:theme="@style/EcommerceTheme">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="@dimen/cardview_radius"
+        card_view:cardElevation="@dimen/cardview_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp">
+
+                <ImageView
+                    android:id="@+id/iv_slider_product_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true" />
+
+                <com.like.LikeButton
+                    android:id="@+id/btn_slider_favourite"
+                    style="@style/LikeBtnFavourite" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/tv_slider_product_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="@dimen/heading_small"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/p_item_heading_mb"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/tv_slider_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/heading_small"
+                    android:layout_below="@id/tv_slider_product_heading" />
+
+                <TextView
+                    android:id="@+id/tv_slider_product_Previous_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prev"
+                    android:textColor="@color/fontSemiWhiteColor"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:background="@drawable/text_strike_through"
+                    android:textSize="@dimen/heading_small"
+                    android:layout_marginLeft="@dimen/fab_margin_half"
+                    android:layout_toRightOf="@id/tv_slider_product_price"
+                    android:layout_below="@id/tv_slider_product_heading"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

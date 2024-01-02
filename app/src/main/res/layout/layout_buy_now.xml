@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:id="@+id/layout_buy_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner_radius">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Jute Silk Churidar" />
+
+        <TextView
+            android:id="@+id/text_view_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+            tool:text="4.7" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/ratingBarReview"
+            style="@style/SmallRating"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_8"
+            android:isIndicator="true"
+            android:rating="4.0"
+            android:stepSize="1.0"
+            android:theme="@style/SmallRating"
+            app:layout_constraintLeft_toRightOf="@+id/text_view_rating"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title" />
+
+        <TextView
+            android:id="@+id/text_view_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingBottom="@dimen/margin_8"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintLeft_toRightOf="@+id/ratingBarReview"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+            tool:text="337 reviews" />
+
+
+        <Button
+            android:id="@+id/button_buy_now"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_8"
+            android:background="@drawable/blue_rectangle"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/buy_now"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

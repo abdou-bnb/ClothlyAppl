@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/EcommerceTheme"
+    tools:context=".ui.userProfile.ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_cart_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/abl_cart_appbar"
+        android:layout_marginBottom="@dimen/margin_16">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_x"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingRight="@dimen/margin_x">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_image"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="1px" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/fab_margin_half"
+                    android:textSize="@dimen/heading_mideum"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_view_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/fab_margin_double"
+                    android:textColor="@color/fontLiteColor"
+                    android:textSize="@dimen/heading_small" />
+
+                <!--START OF MY ORDER/ MY FAV BTN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_my_orders"
+                        style="@style/BtnBorderSmallPrimary"
+                        android:layout_marginRight="@dimen/fab_margin_quarter"
+                        android:layout_weight="1"
+                        android:text="@string/my_orders" />
+
+                    <Button
+                        android:id="@+id/btn_my_favourite"
+                        style="@style/BtnBorderSmallPrimary"
+                        android:layout_marginLeft="@dimen/fab_margin_quarter"
+                        android:layout_weight="1"
+                        android:text="@string/my_favourites" />
+
+                </LinearLayout>
+                <!--END OF MY ORDER/ MY FAV BTN-->
+                <LinearLayout
+                    android:id="@+id/layout_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/image_view_empty"
+                        android:layout_width="@dimen/height_150"
+                        android:layout_height="@dimen/height_150"
+                        android:alpha="0.4"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_empty" />
+
+                    <TextView
+                        android:id="@+id/text_view_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image_view_empty"
+                        android:layout_marginTop="0dp"
+                        android:text="No data found!" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_view_address_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/fab_margin_double"
+                    android:text="@string/my_shipping_address"
+                    android:textSize="@dimen/heading_mideum" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8" />
+
+                <Button
+                    android:id="@+id/button_add_address"
+                    style="@style/Button_Primary_Color"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/margin_8"
+                    android:text="@string/add_address" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

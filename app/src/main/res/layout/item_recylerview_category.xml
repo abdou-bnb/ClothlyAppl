@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_16"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/category_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_160"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dami_02" />
+
+    <!-- <android.support.constraint.ConstraintLayout
+         android:id="@+id/layout_womens_product_preview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/colorWhite">
+
+         <View
+             android:id="@+id/view_women"
+             android:layout_width="8dp"
+             android:layout_height="@dimen/height_0"
+             android:background="@color/transparent_color"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:id="@+id/text_title_category1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/margin_16"
+             android:layout_marginLeft="@dimen/margin_16"
+             android:layout_marginTop="@dimen/margin_16"
+             android:text="@string/womens_bags"
+             android:textColor="@color/black_01"
+             android:textSize="@dimen/text_size_14"
+             android:textStyle="bold"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <android.support.constraint.ConstraintLayout
+             android:id="@+id/constraint_category1"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/height_160"
+             android:layout_marginTop="@dimen/margin_8"
+             android:paddingLeft="@dimen/padding_10"
+             app:layout_constraintEnd_toStartOf="@+id/view_women"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/text_title_category1">
+
+             <ImageView
+                 android:id="@+id/image_cat1_1"
+                 style="@style/small_image_preview_home_page"
+                 android:src="@drawable/dami_05"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <ImageView
+                 android:id="@+id/image_cat1_2"
+                 style="@style/small_image_preview_home_page"
+                 android:layout_marginStart="@dimen/margin_10"
+                 android:layout_marginLeft="@dimen/margin_10"
+                 android:src="@drawable/dami_05"
+                 app:layout_constraintStart_toEndOf="@+id/image_cat1_1"
+                 app:layout_constraintTop_toTopOf="@+id/image_cat1_1" />
+
+             <ImageView
+                 android:id="@+id/image_cat1_3"
+                 style="@style/small_image_preview_home_page"
+                 android:layout_marginTop="@dimen/margin_10"
+                 android:src="@drawable/dami_05"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/image_cat1_1" />
+
+
+             <ImageView
+                 android:id="@+id/image_cat1_4"
+                 style="@style/small_image_preview_home_page"
+                 android:layout_marginStart="@dimen/margin_10"
+                 android:layout_marginLeft="@dimen/margin_10"
+                 android:layout_marginTop="@dimen/margin_10"
+                 android:layout_marginEnd="@dimen/margin_10"
+                 android:layout_marginRight="@dimen/margin_10"
+                 android:layout_marginBottom="@dimen/margin_16"
+                 android:src="@drawable/dami_05"
+                 app:layout_constraintStart_toEndOf="@+id/image_cat1_3"
+                 app:layout_constraintTop_toBottomOf="@+id/image_cat1_2" />
+         </android.support.constraint.ConstraintLayout>
+
+
+         <TextView
+             android:id="@+id/text_title_category2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/margin_12"
+             android:layout_marginLeft="@dimen/margin_12"
+             android:layout_marginTop="@dimen/margin_16"
+             android:text="@string/womens_dress"
+             android:textColor="@color/black_01"
+             android:textSize="@dimen/text_size_14"
+             android:textStyle="bold"
+             app:layout_constraintStart_toEndOf="@+id/view_women"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <ImageView
+             android:id="@+id/image_view_category2"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/height_160"
+             style="@style/large_image_preview_home_page"
+             android:paddingLeft="@dimen/padding_10"
+             android:paddingRight="@dimen/padding_10"
+             android:src="@drawable/dami_05"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@+id/view_women"
+             app:layout_constraintTop_toTopOf="@+id/constraint_category1" />
+
+     </android.support.constraint.ConstraintLayout>-->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_8"
+            app:layout_constraintBottom_toBottomOf="@+id/cardview_2"
+            app:layout_constraintEnd_toStartOf="@+id/cardview_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardview_2"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_ash"
+                android:id="@+id/constraint_category1">
+
+                <TextView
+                    android:id="@+id/text_title_category1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="@string/womens_bags"
+                    android:textColor="@color/black_01"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_cat1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dami_05"
+                    app:layout_constraintBottom_toTopOf="@+id/image_cat1_2"
+                    app:layout_constraintEnd_toStartOf="@+id/image_cat1_3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title_category1" />
+
+                <ImageView
+                    android:id="@+id/image_cat1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dami_05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/image_cat1_4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_cat1_1" />
+
+                <ImageView
+                    android:id="@+id/image_cat1_3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dami_05"
+                    app:layout_constraintBottom_toTopOf="@+id/image_cat1_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_cat1_1"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title_category1" />
+
+                <ImageView
+                    android:id="@+id/image_cat1_4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dami_05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_cat1_2"
+                    app:layout_constraintTop_toBottomOf="@+id/image_cat1_3" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@color/activityBG"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardview_1"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_ash">
+
+                <TextView
+                    android:id="@+id/text_title_category2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="@string/womens_bags"
+                    android:textColor="@color/black_01"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_view_category2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_160"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dami_05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title_category2" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

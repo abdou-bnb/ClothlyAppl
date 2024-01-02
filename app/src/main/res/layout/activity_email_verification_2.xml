@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_30">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorTransparent"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:src="@mipmap/ic_logo_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+            <TextView
+                android:id="@+id/text_view_header_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginLeft="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_80"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/please_enter_email_that_you_used"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_logo" />
+
+
+            <View
+                android:id="@+id/view_email_bg"
+                style="@style/edit_text_border"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_header_2" />
+
+            <View
+                android:id="@+id/view_email_icon"
+                android:layout_width="@dimen/width_30"
+                android:layout_height="@dimen/height_30"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@mipmap/ic_email"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintStart_toStartOf="@+id/view_email_bg"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="@dimen/height_1"
+                android:layout_height="@dimen/height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_email_icon"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg" />
+
+            <EditText
+                android:id="@+id/edit_text_email"
+                style="@style/edit_text"
+                android:hint="@string/name_yourdomain_cim"
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toBottomOf="@+id/view_email_bg"
+                app:layout_constraintEnd_toEndOf="@+id/view_email_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_line"
+                app:layout_constraintTop_toTopOf="@+id/view_email_bg" />
+
+            <TextView
+                android:id="@+id/text_view_email_error"
+                style="@style/text_view_error"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_text_email"
+                app:layout_constraintEnd_toEndOf="@+id/edit_text_email" />
+
+            <TextView
+                android:id="@+id/text_view_enter_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginLeft="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_30"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/please_enter_valid_pin_code"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_email_bg" />
+
+
+            <View
+                android:id="@+id/view_pin_bg"
+                style="@style/edit_text_border"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_enter_pin" />
+
+            <View
+                android:id="@+id/view_pin_icon"
+                android:layout_width="@dimen/width_30"
+                android:layout_height="@dimen/height_30"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@mipmap/ic_email"
+                app:layout_constraintBottom_toBottomOf="@+id/view_pin_bg"
+                app:layout_constraintStart_toStartOf="@+id/view_pin_bg"
+                app:layout_constraintTop_toTopOf="@+id/view_pin_bg" />
+
+            <View
+                android:id="@+id/view_line_pin"
+                android:layout_width="@dimen/height_1"
+                android:layout_height="@dimen/height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="@+id/view_pin_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_pin_icon"
+                app:layout_constraintTop_toTopOf="@+id/view_pin_bg" />
+
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                android:id="@+id/edit_text_pin_code"
+                android:layout_width="185dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:digits="1234567890"
+                android:fontFamily="@font/roboto_bold"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/colorWhite"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_17"
+                app:pinAnimationType="none"
+                app:pinBackgroundDrawable="@drawable/bg_pin_round"
+                app:pinBackgroundIsSquare="true"
+                app:pinCharacterSpacing="@dimen/margin_35"
+                app:pinLineColors="@drawable/pin_line_colors"
+                app:pinTextBottomPadding="4dp"
+                tools:layout_editor_absoluteX="139dp"
+                tools:layout_editor_absoluteY="356dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_pin_bg"
+                app:layout_constraintEnd_toEndOf="@+id/view_pin_bg"
+                app:layout_constraintStart_toEndOf="@+id/view_line_pin"
+                app:layout_constraintTop_toTopOf="@+id/view_pin_bg"/>
+
+            <!-- <TextView
+                 android:id="@+id/text_view_resend"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/margin_10"
+                 android:fontFamily="@font/roboto_light"
+                 android:gravity="center"
+                 android:enabled="false"
+                 android:text="@string/resend_code"
+                 android:textColor="@color/gray_border"
+                 android:textSize="@dimen/text_size_14"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/view_pin_bg" />
+
+             <TextView
+                 android:id="@+id/text_view_counter"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/roboto_medium"
+                 android:layout_marginTop="@dimen/margin_10"
+                 android:layout_marginLeft="@dimen/padding_5"
+                 android:textColor="@color/colorWhite"
+                 android:textSize="@dimen/text_size_14"
+                 app:layout_constraintTop_toBottomOf="@+id/view_email_bg"
+                 app:layout_constraintLeft_toRightOf="@+id/text_view_resend"/>
+ -->
+
+            <Button
+                android:id="@+id/button_sign_in"
+                style="@style/button_sign_in"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/continues"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_pin_bg" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
+

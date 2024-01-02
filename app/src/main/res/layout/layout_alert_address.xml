@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="@dimen/fab_margin">
+
+            <!--START OF SHIPPING METHOD CONATINER-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+            </LinearLayout>
+            <!--END OF SHIPPING METHOD CONATINER-->
+
+
+            <!--START OF EDITTEXT : ADDRESS LINE 1-->
+            <LinearLayout style="@style/AddressFormConatinerFull">
+
+                <TextView
+                    style="@style/TVAddressForm"
+                    android:text="@string/input_address_1" />
+
+                <EditText
+                    android:id="@+id/et_shipping_address_1"
+                    style="@style/ETAddressForm" />
+
+            </LinearLayout>
+            <!--END OF EDITTEXT : ADDRESLINE 1-->
+
+            <!--START OF EDITTEXT : ADDRESLINE 2-->
+            <LinearLayout style="@style/AddressFormConatinerFull">
+
+                <TextView
+                    style="@style/TVAddressForm"
+                    android:text="@string/input_address_2" />
+
+                <EditText
+                    android:id="@+id/et_shipping_address_2"
+                    style="@style/ETAddressForm" />
+
+            </LinearLayout>
+            <!--END OF EDITTEXT : ADDRESLINE 2-->
+
+
+            <LinearLayout style="@style/AddressFormConatinerHalf">
+
+                <!--START OF EDITTEXT : CITY-->
+                <LinearLayout
+                    style="@style/AddressFormConatiner"
+                    android:layout_marginRight="@dimen/fab_margin_half">
+
+                    <TextView
+                        style="@style/TVAddressForm"
+                        android:text="@string/input_city" />
+
+                    <EditText
+                        android:id="@+id/et_shipping_city"
+                        style="@style/ETAddressForm" />
+                </LinearLayout>
+                <!--END OF EDITTEXT : CITY-->
+
+                <!--START OF EDITTEXT : ZIP CODE-->
+                <LinearLayout
+                    style="@style/AddressFormConatiner"
+                    android:layout_marginLeft="@dimen/fab_margin_half">
+
+                    <TextView
+                        style="@style/TVAddressForm"
+                        android:text="@string/input_zip" />
+
+                    <EditText
+                        android:id="@+id/et_shipping_zip"
+                        style="@style/ETAddressForm"
+                        android:inputType="number"/>
+                </LinearLayout>
+                <!--END OF EDITTEXT : ZIP CODE-->
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/AddressFormConatinerHalf">
+
+                <!--START OF EDITTEXT : STATE-->
+                <LinearLayout
+                    style="@style/AddressFormConatiner"
+                    android:layout_marginRight="@dimen/fab_margin_half">
+
+                    <TextView
+                        style="@style/TVAddressForm"
+                        android:text="@string/input_state" />
+
+                    <EditText
+                        android:id="@+id/et_shipping_state"
+                        style="@style/ETAddressForm" />
+                </LinearLayout>
+                <!--END OF EDITTEXT : STATE-->
+
+                <!--START OF EDITTEXT : COUNTRY-->
+                <LinearLayout
+                    style="@style/AddressFormConatiner"
+                    android:layout_marginLeft="@dimen/fab_margin_half">
+
+                    <TextView
+                        style="@style/TVAddressForm"
+                        android:text="@string/input_country" />
+
+                    <EditText
+                        android:id="@+id/et_shipping_country"
+                        style="@style/ETAddressForm" />
+                </LinearLayout>
+                <!--END OF EDITTEXT : COUNTRY-->
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/btn_complete_address"
+                style="@style/BtnWithIconLeftContainer"
+                android:layout_marginTop="@dimen/fab_margin_half"
+                android:background="@drawable/btn_round_small_primary">
+
+                <Button
+                    android:id="@+id/btn_complete_address_inner"
+                    style="@style/BtnWithIconLeft"
+                    android:text="Add Address" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
